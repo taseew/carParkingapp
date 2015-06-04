@@ -1,10 +1,29 @@
+# extends layout
+# 
+# block content
+# 	h1= title
+# 	p Welcome to #{title}
+# 	ul
+# 		each occupied, slotId in slots
+# 			li
+# 				span= slotId
+# 				span= occupied
 extends layout
 
 block content
-	h1= title
-	p Welcome to #{title}
-	ul
-		each occupied, slotId in slots
-			li
-				span= slotId
-				span= occupied
+    h1= title
+    p Welcome to #{title}
+
+    div
+        table.form_table(cellspacing='5', cellpadding='5', border='1')
+            thead
+                tr
+                    th slotNumbers
+                    th status
+            tbody
+                each occupied , slotId in slots
+                    tr
+                        td
+                            p #{slotId}
+                        td
+                            p #{occupied}
