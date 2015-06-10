@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+    form(name="add-slot", method="post")
+        div.input
+            span.label Slot Number
+            input(type="text", name="slotNumber")
+        div.input
+            span.label Node Id
+            input(type="text", name="nodeNumber")
+        div.actions
+            input(type="submit", value="Add a new slot")
